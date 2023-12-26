@@ -1,0 +1,87 @@
+<html>
+<head>
+<style>
+    *{box-sizing: border-box}
+body {font-family: Arial, Helvetica, sans-serif;}
+/*Style the header*/
+header {
+    background-color: #E7D7C1;
+    padding: 30px;
+    text-align:center;
+    font-size:35px;
+    color: #8C1C13;
+}
+nav {
+  float: left;
+  width: 30%;
+  height: 150px;
+  background: #d3b7b7;
+  padding: 20px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: #f1f1f1;
+  height: 300px;
+}
+
+section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
+</head>
+<body>
+
+<h2>CV Trang Cá Nhân</h2>
+
+<header>
+  <h1>Trần Thu Dinh</h1>
+</header>
+
+<section>
+  <nav>
+    <ul>
+      <li><a href="#">Kinh nghiệm làm việc</a></li>
+      <li><a href="#">Kỹ năng</a></li>
+      <li><a href="#">Học vấn</a></li>
+      <li><a href="#">Sở thích</a></li>
+    </ul>
+  </nav>
+  
+  <article>
+    <h1>Thông tin cá nhân</h1>
+    <p>Họ và tên: Trần Thu Dinh</p>
+    <p>Ngày sinh: 01/01/2003</p>
+    <p>Giới tính: Nữ</p>
+    <p>Địa chỉ: Số 1, Đường 1, Quận 1, TP.HCM</p>
+    <p>Email: tranthudinh@gmail.com</p>
+    <p>Số điện thoại: 0123456789</p>
+    <p>Mục tiêu nghề nghiệp: Trở thành phú bà</p>
+  </article>
+</section>
+
+</body>
+</html>

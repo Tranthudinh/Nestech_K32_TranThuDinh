@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Bai 2 </title>
+    </head>
+    <body>
+        let width = 40
+        let height = 20
+        let area = width * height
+        document.write('Area = ' + area)
+    </body>
+</html>
