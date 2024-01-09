@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+    function thayTheKyTu() {
+      var mangKyTu = document.getElementById("mangKyTu").value;
+      var ketQua = mangKyTu.replace(/-/g, "_");
+      document.getElementById("ketQua").innerHTML = ketQua;
+    }
+  </script>
+</head>
+<body>
+  <label for="mangKyTu">Nhập mảng ký tự:</label>
+  <input type="text" id="mangKyTu">
+  <button onclick="thayTheKyTu()">Thay thế</button>
+  <p id="ketQua"></p>
+</body>
+</html>

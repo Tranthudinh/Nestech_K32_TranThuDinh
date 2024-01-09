@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var str = prompt("Nhập vào một chuỗi");
+      var vowels = 0;
+
+      for (var i = 0; i < str.length; i++) {
+        var char = str[i].toLowerCase();
+        if (char === 'a' || char === 'e' || char === 'i' || char === 'o' || char === 'u') {
+          vowels++;
+        }
+      }
+
+      var output = document.getElementById('output');
+      output.innerHTML = "Chuỗi '" + str + "' có " + vowels + " nguyên âm.";
+    });
+  </script>
+</head>
+<body>
+  <div id="output"></div>
+</body>
+</html>

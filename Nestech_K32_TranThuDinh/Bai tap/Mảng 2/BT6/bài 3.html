@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chương trình tính giá trị lớn nhất và trung bình của mảng</title>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var arr = [5, 12, 8, 15, 20, 3, 10, 7, 18, 25];
+      var max = arr[0];
+      var sum = 0;
+
+      for (var i = 0; i < arr.length; i++) {
+        if (arr[i] > max) {
+          max = arr[i];
+        }
+        sum += arr[i];
+      }
+
+      var average = sum / arr.length;
+
+      var output = document.getElementById('output');
+      output.innerHTML = "Giá trị lớn nhất trong mảng là " + max + "<br>Giá trị trung bình của các phần tử trong mảng là " + average;
+    });
+  </script>
+</head>
+<body>
+  <div id="output"></div>
+</body>
+</html>

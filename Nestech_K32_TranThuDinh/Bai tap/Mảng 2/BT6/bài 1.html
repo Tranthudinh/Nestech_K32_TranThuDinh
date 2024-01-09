@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var arr = [5, 12, 8, 15, 20, 3, 10, 7, 18, 25];
+      var count = 0;
+
+      for (var i = 0; i < arr.length; i++) {
+        if (arr[i] >= 10) {
+          count++;
+        }
+      }
+
+      var output = document.getElementById('output');
+      output.innerHTML = "Số nguyên lớn hơn hoặc bằng 10 là: " + count;
+    });
+  </script>
+</head>
+<body>
+  <div id="output"></div>
+</body>
+</html>

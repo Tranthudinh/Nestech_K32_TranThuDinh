@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <script>
+        var arr = []; 
+
+        for (var i = 0; i < 10; i++) {
+            arr[i] = parseInt(prompt("Nhập phần tử thứ " + (i + 1) + " của mảng:"));
+        }
+
+        arr.sort(function(a, b) {
+            return b - a;
+        });
+
+        document.write("<p>Mảng đã được sắp xếp theo thứ tự giảm dần:</p>");
+        document.write("<p>" + arr.join(", ") + "</p>");
+    </script>
+</body>
+</html>

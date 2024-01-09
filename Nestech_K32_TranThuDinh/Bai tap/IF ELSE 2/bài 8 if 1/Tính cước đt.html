@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <script>
+        var soPhutSuDung = prompt("Nhập số phút sử dụng: ");
+        var cuocDienThoai;
+        if (soPhutSuDung <= 50) {
+            cuocDienThoai = soPhutSuDung * 500;
+        } else if (soPhutSuDung <= 200) {
+            cuocDienThoai = soPhutSuDung * 400;
+        } else if (soPhutSuDung <= 400) {
+            cuocDienThoai = soPhutSuDung * 300;
+        } else {
+            cuocDienThoai = soPhutSuDung * 200;
+        }
+        document.write("Cước điện thoại là: " + cuocDienThoai);
+    </script>
+</html>

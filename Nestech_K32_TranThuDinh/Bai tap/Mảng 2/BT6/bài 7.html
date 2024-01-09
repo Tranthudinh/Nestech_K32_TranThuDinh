@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <script>
+        let arr = []; 
+        let V;
+
+        for (let i = 0; i < 10; i++) {
+            arr[i] = parseInt(prompt("Nhập phần tử thứ " + (i + 1) + " của mảng:"));
+        }
+
+        V = parseInt(prompt("Nhập hoặc tạo số nguyên V:"));
+
+        let index = arr.indexOf(V);
+        if (index !== -1) {
+            for (let i = index; i < arr.length - 1; i++) {
+                arr[i] = arr[i + 1];
+            }
+            arr[arr.length - 1] = 0;
+        }
+
+        document.write("<p>Mảng sau khi xoá V:</p>");
+        document.write("<p>" + arr.join(", ") + "</p>");
+    </script>
+</body>
+</html>

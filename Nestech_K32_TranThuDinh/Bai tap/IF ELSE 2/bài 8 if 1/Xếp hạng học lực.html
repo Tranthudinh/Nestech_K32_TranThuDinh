@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Xếp hạng học lực của học sinh</title>
+</head>
+<body>
+    <script>
+        var diemBaiKiemTra = prompt("Nhập điểm bài kiểm tra: ");
+        var diemThiGiuaKy = prompt("Nhập điểm thi giữa kỳ: ");
+        var diemThiCuoiKy = prompt("Nhập điểm thi cuối kỳ: ");
+        var diemTrungBinh = (parseFloat(diemBaiKiemTra) + parseFloat(diemThiGiuaKy) + parseFloat(diemThiCuoiKy)) / 3;
+        if (diemTrungBinh >= 8.5) {
+            document.write("Học lực của học sinh là: Giỏi");
+        } else if (diemTrungBinh >= 6.5) {
+            document.write("Học lực của học sinh là: Khá");
+        } else if (diemTrungBinh >= 5) {
+            document.write("Học lực của học sinh là: Trung bình");
+        } else {
+            document.write("Học lực của học sinh là: Yếu");
+        }
+    </script>
+</body>
+</html>

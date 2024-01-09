@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chương trình đếm số ký tự số trong mảng</title>
+</head>
+<body>
+    <script>
+        let arr = ['c', 's', 'c', '2', '6', '1'];
+        let count = 0;
+
+        for (let i = 0; i < arr.length; i++) {
+            if (!isNaN(parseInt(arr[i]))) {
+                count++;
+            }
+        }
+
+        document.write("Số ký tự số trong mảng là: " + count);
+    </script>
+</body>
+</html>

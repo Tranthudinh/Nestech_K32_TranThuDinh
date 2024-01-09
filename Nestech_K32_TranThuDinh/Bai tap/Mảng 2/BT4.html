@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Trò chơi Caro</title>
+  <style>
+    table {
+      border-collapse: collapse;
+    }
+    td {
+      width: 30px;
+      height: 30px;
+      text-align: center;
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+  <h1>Trò chơi Caro</h1>
+  <table id="board">
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </table>
+
+  <script>
+    let currentPlayer = "X";
+    let gameOver = false;
+
+    function playTurn(row, col) {
+      let cell = document.getElementById("board").rows[row].cells[col];
+      if (cell.innerHTML === "") {
+        cell.innerHTML = currentPlayer;
+        return true; 
+      } else {
+        return false; 
+      }
+    }
+
+    function checkWinner(player) {
+      let board = document.getElementById("board");
+      let rows = board.rows.length;
+      let cols = board.rows[0].cells.length;
+
+      // Kiểm tra hàng ngang
+      for (let i = 0; i < rows; i++) {
+        for (let j = 0; j < cols - 2; j++) {
+          if (
+            board.rows[i].cells[j].innerHTML === player &&
+            board.rows[i].cells[j + 1].innerHTML === player &&
+            board.rows[i].cells[j + 2].innerHTML === player
+          ) {
+            return true; 
+          }
+        }
+      }
+
+      // Kiểm tra hàng dọc
+      for (let i = 0; i < rows - 2; i++) {
+        for (let j = 0; j < cols; j++) {
+          if (
+            board.rows[i].cells[j].innerHTML === player &&
+            board.rows[i + 1].cells[j].innerHTML === player &&
+            board.rows[i + 2].cells[j].innerHTML === player
+          ) {
+            return true; 
+          }
+        }
+      }
+
+      // Kiểm tra đường chéo 1
+      for (let i = 0; i < rows - 2; i++) {
+        for (let j = 0; j < cols - 2; j++) {
+          if (
+            board.rows[i].cells[j].innerHTML === player &&
+            board.rows[i + 1].cells[j + 1].innerHTML === player &&
+            board.rows[i + 2].cells[j + 2].innerHTML === player
+          ) {
+            return true; 
+          }
+        }
+      }
+
+      // Kiểm tra đường chéo 2
+      for (let i = 0; i < rows - 2; i++) {
+        for (let j = 2; j < cols; j++) {
+          if (
+            board.rows[i].cells[j].innerHTML === player &&
+            board.rows[i + 1].cells[j - 1].innerHTML === player &&
+            board.rows[i + 2].cells[j - 2].innerHTML === player
+          ) {
+            return true; 
+          }
+        }
+      }
+
+      return false; 
+    }
+
+    function handleClick(row, col) {
+      if (!gameOver) {
+        if (playTurn(row, col)) {
+          if (checkWinner(currentPlayer)) {
+            alert("Người chơi " + currentPlayer + " thắng!");
+            gameOver = true;
+          } else {
+            currentPlayer = currentPlayer === "X" ? "O" : "X";
+          }
+        } else {
+          alert("Lượt chơi không hợp lệ. Vui lòng chọn lại!");
+        }
+      }
+    }
+
+    let cells = document.getElementsByTagName("td");
+    for (let i = 0; i < cells.length; i++) {
+      cells[i].addEventListener("click", function() {
+        let row = this.parentNode.rowIndex;
+        let col = this.cellIndex;
+        handleClick(row, col);
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> di chuyển Nobita </title>
+    </head>
+    <body onload="init()">
+            <img src="https://c0.klipartz.com/pngpicture/947/1003/gratis-png-shizuka-minamoto-nobita-nobi-doraemon-animacion-doraemon.png" id="Nobita"
+            style="position:absolute;left:0;top:0;" height="100" width="80"/>
+            <script>
+                function upArrowPressed() {
+                let element = document.getElementById("Nobita")
+                element.style.top = parseInt(element.style.top) - 5 + 'px'
+            }
+            function downArrowPressed() {
+                var element = document.getElementById("Nobita")
+                element.style.top = parseInt(element.style.top) + 5 + 'px'
+            }
+            function leftArrowPressed() {
+                var element = document.getElementById("Nobita")
+                element.style.top = parseInt(element.style.top) - 5 + 'px'
+            }
+            function rightArrowPressed() {
+                var element = document.getElementById("Nobita")
+                element.style.top = parseInt(element.style.top) + 5 + 'px'
+            }
+            function moveSelection(evt) {
+                switch (evt.keyCode) {
+                    case 37:
+                            leftArrowPressed()
+                            break;
+                    case 39:
+                            rightArrowPressed()
+                            break;
+                    case 38:
+                            upArrowPressed()
+                            break;
+                    case 40:
+                            downArrowPressed()
+                            break;
+                }
+            }
+            function docReady() {
+                window.addEventListener('keydown', moveSelection)
+            }
+            <body onload="doReady()"></body>
+            </script>
+            <script scr="bài 2 sk bàn phím.js"></script>
+    </body>
+</html>

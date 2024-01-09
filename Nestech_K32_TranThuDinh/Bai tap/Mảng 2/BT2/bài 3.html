@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+</head>
+<body>
+  <script>
+    const input = prompt("Nhập chuỗi: ");
+    let result = "";
+
+    for (let i = 0; i < input.length; i++) {
+      const char = input[i];
+      if (char >= "a" && char <= "z") {
+        result += char.toUpperCase();
+      } else {
+        result += char;
+      }
+    }
+
+    console.log(result);
+  </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <script>
+        var arr = []; 
+        var V; 
+
+        for (var i = 0; i < 10; i++) {
+            arr[i] = parseInt(prompt("Nhập phần tử thứ " + (i + 1) + " của mảng:"));
+        }
+
+        V = parseInt(prompt("Nhập số nguyên V:"));
+
+        var isInArray = arr.includes(V);
+
+        if (isInArray) {
+            document.write("<p>" + V + " is in the array.</p>");
+        } else {
+            document.write("<p>" + V + " is not in the array.</p>");
+        }
+    </script>
+</body>
+</html>

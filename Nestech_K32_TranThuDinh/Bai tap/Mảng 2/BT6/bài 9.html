@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <script>
+        var a = []; 
+        var b = []; 
+        var c = new Array(20); 
+
+        for (var i = 0; i < 10; i++) {
+            a[i] = parseInt(prompt("Nhập phần tử thứ " + (i + 1) + " của mảng a:"));
+        }
+
+        for (var i = 0; i < 10; i++) {
+            b[i] = parseInt(prompt("Nhập phần tử thứ " + (i + 1) + " của mảng b:"));
+        }
+
+        for (var i = 0; i < 10; i++) {
+            c[i] = b[i];
+            c[i + 10] = a[i];
+        }
+
+        document.write("<p>Mảng c sau khi nối:</p>");
+        document.write("<p>" + c.join(", ") + "</p>");
+    </script>
+</body>
+</html>

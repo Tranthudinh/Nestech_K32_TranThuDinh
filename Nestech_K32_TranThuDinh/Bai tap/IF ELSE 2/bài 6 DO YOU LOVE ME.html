@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Do You Love Me</title>
+        <style>
+            #noButton {
+                position: absolute;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Do You Love Me?</h1>
+        <button id="yesButton" onclick="showLove()">YES</button>
+        <button id="noButton" onmouseover="moveNoButton()">NO</button>
+    
+        <script>
+            function showLove() {
+                alert("<3");
+            }
+    
+            function moveNoButton() {
+                var button = document.getElementById("noButton");
+                var windowHeight = window.innerHeight;
+                var windowWidth = window.innerWidth;
+    
+                var randomTop = Math.floor(Math.random() * (windowHeight - 50));
+                var randomLeft = Math.floor(Math.random() * (windowWidth - 50));
+    
+                button.style.top = randomTop + "px";
+                button.style.left = randomLeft + "px";
+            }
+        </script>
+    </body>
+</html>
